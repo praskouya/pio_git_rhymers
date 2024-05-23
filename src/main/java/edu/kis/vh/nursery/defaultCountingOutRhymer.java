@@ -2,11 +2,11 @@ package edu.kis.vh.nursery;
 
 public class defaultCountingOutRhymer {
 
-    public static final int MAX_CAPACITY = 12; 
-    public static final int EMPTY = -1;
-    public static final int MAX_INDEX = MAX_CAPACITY - 1;
+    private static final int MAX_CAPACITY = 12; 
+    private static final int EMPTY = -1;
+    private static final int MAX_INDEX = MAX_CAPACITY - 1;
 
-    private int[] numbers = new int[MAX_CAPACITY];
+    private final int[] numbers = new int[MAX_CAPACITY];
 
     private int total = EMPTY;
 
@@ -33,5 +33,9 @@ public class defaultCountingOutRhymer {
         if (callCheck())
             return -1;
         return numbers[total--];
+    }
+
+    public int detTotal(){
+        return total;
     }
 }
