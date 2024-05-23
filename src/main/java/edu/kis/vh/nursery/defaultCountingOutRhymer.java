@@ -34,4 +34,8 @@ public class defaultCountingOutRhymer {
             return -1;
         return numbers[total--];
     }
+
+    public int detTotal(){
+        return total;
+    }
 }
