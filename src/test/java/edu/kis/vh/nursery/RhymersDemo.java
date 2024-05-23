@@ -7,12 +7,14 @@ import edu.kis.vh.nursery.factory.Rhymersfactory;
 
 class RhymersDemo {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         Rhymersfactory factory = new DefaultRhymersFactory();
+        testRhymers(factory);
+    }
         
-        defaultCountingOutRhymer[] rhymers = { factory.getStandardRhymer(), factory.getFalseRhymer(),
-                factory.getFIFORhymer(), factory.getHanoiRhymer()};
-        
+        public static void testRhymers(Rhymersfactory factory) {
+        defaultCountingOutRhymer[] rhymers = { factory.GetStandardRhymer(), factory.GetFalseRhymer(),
+                factory.GetFIFORhymer(), factory.GetHanoiRhymer()};
         for (int i = 1; i < 15; i++)
             for (int j = 0; j < 3; j++)
                 rhymers[j].countIn(i);
